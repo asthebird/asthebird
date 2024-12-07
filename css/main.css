@@ -13,3 +13,6 @@ color: white;
   padding: 0;
   overflow: hidden;
 }
+span {
+  font-family: sans-serif;
+}
