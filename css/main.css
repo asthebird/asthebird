@@ -1,19 +1,19 @@
-#navbaritem {
+.navbaritem {
   float: left;
 }
-#navbartext {
+.navbartext {
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-#navbaritem {
+.navbaritem {
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-#navbar {
+.navbar {
   background-color: #cccccc;
   margin: 0;
   padding: 0;
