@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var output = document.getElementById('display');
     var text;
  
-    fs.readFile('/disnut.txt', 'utf8', (err, data) => { 
+    fs.readFile('/list.txt', 'utf8', (err, data) => { 
       if (err) { 
         console.error('Error reading file:', err); 
         return;
