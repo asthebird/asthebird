@@ -9,5 +9,5 @@ window.addEventListener('DOMContentLoaded', function() {
     output.innerHTML = `Invalid number
 
 ` + e;
-  });
+  }
 });
