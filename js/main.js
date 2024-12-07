@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var output = document.getElementById('display');
 
   try {
-    output.innerHTML = disnut['disnut'][Number(inputfield.value)];
+    output.innerHTML = disnut['ligma'][Number(inputfield.value)];
   } catch (e) {
     output.innerHTML = `Invalid number
     
