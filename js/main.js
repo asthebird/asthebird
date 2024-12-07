@@ -1,6 +1,5 @@
-var disnut = require('disnut.json');
-
 window.addEventListener('DOMContentLoaded', function() {
+  var disnut = require('disnut.json');
   var inputfield = document.getElementById('numberid');
   var output = document.getElementById('display');
 
