@@ -1,5 +1,6 @@
 .navbaritem {
   float: left;
+  list-style-type: none;
 }
 .navbartext {
   color: white;
