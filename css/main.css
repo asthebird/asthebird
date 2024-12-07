@@ -1,8 +1,14 @@
 #navbaritem {
   float: left;
 }
-#navbartext #navbaritem {
-color: white;
+#navbartext {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#navbaritem {
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
