@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-  require(['disnut'], function(disnut){
+  require(['js/disnut'], function(disnut){
     var inputfield = document.getElementById('numberid');
     var output = document.getElementById('display');
   
