@@ -1,4 +1,4 @@
-const fs = require('fs'); 
+const fs = require(['fs']); 
 
 window.addEventListener('DOMContentLoaded', function() {
     var inputfield = document.getElementById('numberid');
