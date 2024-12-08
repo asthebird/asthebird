@@ -7,11 +7,15 @@ window.addEventListener('DOMContentLoaded', function() {
         .then(ligst => ligst.text()).then(out => {
             text = out;
 
-            try {
-              var disnut = text.split('\n');
-              output.innerHTML = disnut[parseInt(inputfield.value, 10)];
-            } catch (e) {
-              output.innerHTML = 'Something went wrong\n\n' + e;
-            }
+            setInterval(function() {
+                try {
+                    var disnut = text.split('\n')[parseInt(inputfield.value, 10)];
+                    if (disnut != undefined) {
+                        output.innerHTML = `<span class="showthing">joke #${parseInt(inputfield.value, 10)}:\n</span>` + disnut;
+                    }
+                } catch (e) {
+                    output.innerHTML = 'Something went wrong\n\n' + e;
+                }
+            }, 100);
         });
 });
