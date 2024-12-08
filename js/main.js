@@ -11,10 +11,10 @@ window.addEventListener('DOMContentLoaded', function() {
                 try {
                     var disnut = text.split('\n')
                     var filter = disnut.filter(function(item) {
-                        return item.includes(searchup);
+                        return item.includes(searchup.value);
                     });
 
-                    var result = filter.toString().replace(/(,)/g, '\n');
+                    var result = filter.toString().replace(/,/g, '\n');
                     output.innerHTML = result.substring(1, result.length - 1);
                 } catch (e) {
                     output.innerHTML = 'Oops! Something went wrong:\n\n' + e;
