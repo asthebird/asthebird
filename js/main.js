@@ -14,8 +14,10 @@ window.addEventListener('DOMContentLoaded', function() {
                         return item.includes(searchup.value);
                     });
 
-                    var result = filter.toString().replace(/,/g, '<br />');
-                    output.innerHTML = result;
+                    if (searchup.value != '' || searchup.value != ' '){
+                        var result = filter.toString().replace(/,/g, '<br />');
+                        output.innerHTML = result;
+                    }
                 } catch (e) {
                     output.innerHTML = 'Oops! Something went wrong:\n\n' + e;
                 }
