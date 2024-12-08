@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         return item.includes(searchup.value);
                     });
 
-                    if (searchup.value != '' || searchup.value != ' '){
+                    if (!(searchup.value == '' || searchup.value == ' ')){
                         var result = filter.toString().replace(/,/g, '<br />');
                         output.innerHTML = result;
                     } else {
