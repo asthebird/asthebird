@@ -9,12 +9,19 @@ window.addEventListener('DOMContentLoaded', function() {
 
             setInterval(function() {
                 try {
-                    var disnut = text.split('\n')[parseInt(inputfield.value, 10)];
+                    var disnut = text.split('\n')[parseInt(inputfield.value, 10)-1];
                     if (disnut != undefined) {
-                        output.innerHTML = `<span class="showthing">joke #${parseInt(inputfield.value, 10)}:\n</span>` + disnut;
+                        output.innerHTML = `<span class="showthing">Deez nuts joke #${parseInt(inputfield.value, 10)-1}:\n</span>` + disnut;
+                    } else {
+                        if (parseInt(inputfield.value, 10) > text.split('\n').length) {
+                            output.innerHTML = `Too high! The Dictionary contains only ${text.split('\n').length} jokes!`;
+                        }
+                        if  (parseInt(inputfield.value, 10) < 1) {
+                            output.innerHTML = 'Invalid number';
+                        }
                     }
                 } catch (e) {
-                    output.innerHTML = 'Something went wrong\n\n' + e;
+                    output.innerHTML = 'Something went wrong:\n\n' + e;
                 }
             }, 100);
         });
