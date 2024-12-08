@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', function() {
                     if (searchup.value != '' || searchup.value != ' '){
                         var result = filter.toString().replace(/,/g, '<br />');
                         output.innerHTML = result;
+                    } else {
+                        output.innerHTML = '';
                     }
                 } catch (e) {
                     output.innerHTML = 'Oops! Something went wrong:\n\n' + e;
