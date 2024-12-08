@@ -25,4 +25,5 @@ body {
 .sidebar {
   width: 160px;
   position: fixed;
+  overflow-x: hidden;
 }
