@@ -1,2 +1,2 @@
 ## dictionary of deez nuts
-https://asthebird.github.io/list.txt
+https://asthebird.github.io/
