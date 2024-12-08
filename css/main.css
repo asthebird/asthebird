@@ -22,3 +22,7 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
+.sidebar {
+  width: 160px;
+  position: fixed;
+}
