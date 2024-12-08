@@ -23,7 +23,8 @@ body {
   font-size: 17px;
 }
 .sidebar {
-  width: 160px;
+  height: 100%;
+  width: 200px;
   position: fixed;
   overflow-x: hidden;
 }
