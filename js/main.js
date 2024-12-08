@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-    var inputfield = document.getElementById('numberid');
+    var searchup = document.getElementById('search text');
     var output = document.getElementById('display');
     var text;
  
@@ -9,19 +9,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
             setInterval(function() {
                 try {
-                    var disnut = text.split('\n')[parseInt(inputfield.value, 10)-1];
-                    if (disnut != undefined) {
-                        output.innerHTML = `<span class="showthing">Deez nuts joke #${parseInt(inputfield.value, 10)-1}:\n</span>` + disnut;
-                    } else {
-                        if (parseInt(inputfield.value, 10) > text.split('\n').length) {
-                            output.innerHTML = `Too high! The Dictionary contains only ${text.split('\n').length} jokes!`;
-                        }
-                        if  (parseInt(inputfield.value, 10) < 1) {
-                            output.innerHTML = 'Invalid number';
-                        }
-                    }
+                    var disnut = text.split('\n')
+                    var filter = disnut.filter(function(item) {
+                        return item.includes(searchup);
+                    });
+
+                    var result = filter.toString().replace(/(,)/g, '\n');
+                    output.innerHTML = result.substring(1, result.length - 1);
                 } catch (e) {
-                    output.innerHTML = 'Something went wrong:\n\n' + e;
+                    output.innerHTML = 'Oops! Something went wrong:\n\n' + e;
                 }
             }, 100);
         });
