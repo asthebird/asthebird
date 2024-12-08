@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 try {
                     var disnut = text.split('\n')
                     var filter = disnut.filter(function(item) {
-                        return item.includes(searchup.value);
+                        return item.toLowerCase().includes(searchup.value.toLowerCase());
                     });
 
                     if (!(searchup.value == '' || searchup.value == ' ')){
