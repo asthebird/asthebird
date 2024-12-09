@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 var found;
                 
                 var found = text.split('\n').find(function(element) {
-                    return element.replace('\n', '').replace(' ', '') == searchthing.replace(' ', '');
+                    return element.replace('\n', '').replace(' ', '').toLowerCase() == searchthing.replace(' ', '').toLowerCase();
                 });
                 
                 if (found == undefined) {
