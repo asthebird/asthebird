@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
                             } else {
                                 searchcontent.innerHTML = `${found}<br><span>i didnt add an explanation yet sry</span>`
                             }
-                        }
+                        });
                 }
             });
     });
