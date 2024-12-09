@@ -31,10 +31,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     if (text.split('\n')[i] == searchthing) {
                         searchcontent.innerHTML = `${text.split('\n')[i]} is found! (this is just for testing)`;
                         break;
-                    } else {
-                        searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
                     }
                 }
+                searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
             });
     });
 });
