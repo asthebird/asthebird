@@ -31,13 +31,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
             submitbutton[0].addEventListener('click', function() {
             var searchthing = mainsearch.value;
-            for (let i = 0; i > text.split('\n').length; i++) {
-                if (text.split('\n')[i] == searchthing) {
-                    searchcontent.innerHTML = `${text.split('\n')[i]} is found! (this is just for testing)`;
-                } else {
-                    searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
+                for (let i = 0; i > text.split('\n').length; i++) {
+                    if (text.split('\n')[i] == searchthing) {
+                        searchcontent.innerHTML = `${text.split('\n')[i]} is found! (this is just for testing)`;
+                    } else {
+                        searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
+                    }
                 }
-            }
+            });
     });
-        });
 });
