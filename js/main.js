@@ -29,8 +29,8 @@ window.addEventListener('DOMContentLoaded', function() {
                 var searchthing = mainsearch.value;
                 var found;
                 
-                var found = text.split('\n').find(function(i) {
-                    return text.split('\n')[i].replace('\n', '').replace(' ', '') == searchthing.replace(' ', '');
+                var found = text.split('\n').find(function(element) {
+                    return element.replace('\n', '').replace(' ', '') == searchthing.replace(' ', '');
                 });
                 
                 if (found == undefined) {
