@@ -36,7 +36,17 @@ window.addEventListener('DOMContentLoaded', function() {
                 if (found == undefined) {
                     searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
                 } else {
-                    searchcontent.innerHTML = `i find your thing bozo (test)`
+                    fetch('https://asthebird.github.io/list.txt')
+                        .then(expl => expl.text()).then(explanation => {
+                            var sentence = explanation.split('\n');
+                            var index = text.split('\n').indexOf(searchthing.replace(' ', '').toLowerCase()charAt(0).toUpperCase() + s1.slice(1));
+
+                            if (sentence[index] > -1) {
+                                searchcontent.innerHTML = `${found}<br><span>sounds like: ${sentence[index]}</span>`;
+                            } else {
+                                searchcontent.innerHTML = `${found}<br><span>i didnt add an explanation yet sry</span>`
+                            }
+                        }
                 }
             });
     });
