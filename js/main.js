@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 var found;
                 
                 var found = text.split('\n').find(function(i) {
-                    return text.split('\n')[i] == searchthing);
+                    return text.split('\n')[i] == searchthing;
                 });
                 
                 if (found == undefined) {
