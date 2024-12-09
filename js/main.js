@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function() {
     
     var text;
 
-    submitbutton.addEventListener('click', function() {
+    submitbutton[0].addEventListener('click', function() {
         var searchthing = mainsearch.value;
         for (let i = 0; i > text.split('\n').length; i++) {
             if (text.split('\n')[i] == searchthing) {
