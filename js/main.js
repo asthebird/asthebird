@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     fetch('https://asthebird.github.io/list.txt')
                         .then(expl => expl.text()).then(explanation => {
                             var sentence = explanation.split('\n');
-                            var index = text.split('\n').indexOf(searchthing.replace(' ', '').toLowerCase()charAt(0).toUpperCase() + s1.slice(1));
+                            var index = text.split('\n').indexOf(searchthing.replace(' ', '').toLowerCase().charAt(0).toUpperCase() + s1.slice(1));
 
                             if (sentence[index] > -1) {
                                 searchcontent.innerHTML = `${found}<br><span>sounds like: ${sentence[index]}</span>`;
