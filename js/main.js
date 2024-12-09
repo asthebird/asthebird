@@ -4,13 +4,9 @@ window.addEventListener('DOMContentLoaded', function() {
     var output = document.getElementById('display');
     var searchcontent = document.getElementById('content');
     var submitbutton = document.getElementsByClassName('submit');
-    
-    var text;
  
     fetch('https://asthebird.github.io/list.txt')
-        .then(ligst => ligst.text()).then(out => {
-            text = out;
-
+        .then(ligst => ligst.text()).then(text => {
             setInterval(function() {
                 try {
                     var disnut = text.split('\n')
@@ -30,10 +26,11 @@ window.addEventListener('DOMContentLoaded', function() {
             }, 100);
 
             submitbutton[0].addEventListener('click', function() {
-            var searchthing = mainsearch.value;
+                var searchthing = mainsearch.value;
                 for (let i = 0; i > text.split('\n').length; i++) {
                     if (text.split('\n')[i] == searchthing) {
                         searchcontent.innerHTML = `${text.split('\n')[i]} is found! (this is just for testing)`;
+                        break;
                     } else {
                         searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
                     }
