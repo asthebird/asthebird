@@ -6,17 +6,6 @@ window.addEventListener('DOMContentLoaded', function() {
     var submitbutton = document.getElementsByClassName('submit');
     
     var text;
-
-    submitbutton[0].addEventListener('click', function() {
-        var searchthing = mainsearch.value;
-        for (let i = 0; i > text.split('\n').length; i++) {
-            if (text.split('\n')[i] == searchthing) {
-                searchcontent.innerHTML = `${text.split('\n')[i]} is found! (this is just for testing)`;
-            } else {
-                searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
-            }
-        }
-    });
  
     fetch('https://asthebird.github.io/list.txt')
         .then(ligst => ligst.text()).then(out => {
@@ -39,5 +28,16 @@ window.addEventListener('DOMContentLoaded', function() {
                     output.innerHTML = 'Oops! Something went wrong:\n\n' + e;
                 }
             }, 100);
+
+            submitbutton[0].addEventListener('click', function() {
+            var searchthing = mainsearch.value;
+            for (let i = 0; i > text.split('\n').length; i++) {
+                if (text.split('\n')[i] == searchthing) {
+                    searchcontent.innerHTML = `${text.split('\n')[i]} is found! (this is just for testing)`;
+                } else {
+                    searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
+                }
+            }
+    });
         });
 });
