@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 if (found == undefined) {
                     searchcontent.innerHTML = `<span>No results were found!<br>Tip: the search engine is SUPER specific: you gotta type the word exactly correctly, that's why we have the sidenav!</span>`;
                 } else {
-                    fetch('https://asthebird.github.io/list.txt')
+                    fetch('https://asthebird.github.io/explanations.txt')
                         .then(expl => expl.text()).then(explanation => {
                             var sentence = explanation.split('\n');
                             var edited = searchthing.replace(' ', '').toLowerCase();
